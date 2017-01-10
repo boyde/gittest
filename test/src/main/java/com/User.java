@@ -4,6 +4,7 @@ public class User {
 	private String name;
 	private String sex;
 	private String newdev;
+	private String newdev2;
 
 	public String getName() {
 		return name;
