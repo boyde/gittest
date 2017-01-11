@@ -6,6 +6,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,15 +21,20 @@ public class HelloController {
 		return "jsp/hello";
 	}
 
-	public static void main(String[] args) throws IOException {
+	public static void getStr() throws IOException {
+		List<User> list = new ArrayList<User>();
 		while (true) {
-			File file = new File("D:\\hello.txt");
-			FileInputStream fis = null;
-			fis = new FileInputStream(file);
-			int tempbyte;
-			while ((tempbyte = fis.read()) != -1) {
-				System.out.println(tempbyte);
-			}
+//			try {
+//				Thread.sleep(1);
+//			} catch (InterruptedException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+			list.add(new User());
 		}
+	}
+
+	public static void main(String[] args) throws IOException {
+		getStr();
 	}
 }
